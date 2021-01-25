@@ -1,0 +1,14 @@
+spring.cloud.stream:
+  function.definition: supplier;receive1;receive2;
+  bindings:
+    receive1-in-0.destination: customerId-1
+    receive2-in-0.destination: customerId-2
+    receive1-in-0:
+      group: hello-c1
+    receive1-in-2:
+      group: hello-c2
+spring.rabbitmq:
+    host: 192.168.0.101
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq
